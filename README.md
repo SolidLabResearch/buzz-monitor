@@ -1,16 +1,6 @@
-# Buzz Monitor
+ # Buzz Monitor
 
-Experimentation and Evaluation setup for the Streaming Query Hive.
-
-This is a TypeScript project with Jest testing and ESLint support for monitoring streaming queries.
-
-## Features
-
-- 🚀 **TypeScript**: Full TypeScript support with type definitions
-- 🧪 **Jest Testing**: Comprehensive test suite with coverage reporting
-- 📏 **ESLint**: Code linting for consistent code style
-- 📊 **Monitoring**: Real-time streaming query monitoring capabilities
-- 📈 **Statistics**: Performance metrics and monitoring statistics
+The repository contains scripts employed for the evaluation and experiment for the [Streaming Query Hive](https://github.com/SolidLabResearch/streaming-query-hive).
 
 ## Getting Started
 
@@ -78,71 +68,6 @@ Clean build artifacts:
 npm run clean
 ```
 
-## Project Structure
-
-```
-├── src/                    # Source code
-│   ├── index.ts           # Main entry point
-│   ├── monitor.ts         # StreamingQueryMonitor class
-│   └── types.ts           # TypeScript type definitions
-├── tests/                 # Test files
-│   ├── monitor.test.ts    # Monitor class tests
-│   └── types.test.ts      # Type definition tests
-├── dist/                  # Compiled JavaScript (generated)
-├── coverage/              # Test coverage reports (generated)
-├── tsconfig.json          # TypeScript configuration
-├── jest.config.js         # Jest testing configuration
-├── .eslintrc.js          # ESLint configuration
-├── .gitignore            # Git ignore rules
-└── package.json          # Project dependencies and scripts
-```
-
-## Usage
-
-### Basic Example
-
-```typescript
-import { StreamingQueryMonitor } from './monitor';
-import { QueryConfig } from './types';
-
-const config: QueryConfig = {
-  interval: 5000,    // Check every 5 seconds
-  maxQueries: 100,   // Keep last 100 query results
-  timeout: 30000     // 30 second timeout per query
-};
-
-const monitor = new StreamingQueryMonitor(config);
-
-// Start monitoring
-await monitor.start();
-
-// Get statistics
-const stats = monitor.getStats();
-console.log('Monitoring Stats:', stats);
-
-// Stop monitoring
-await monitor.stop();
-```
-
-### Configuration Options
-
-The `QueryConfig` interface supports the following options:
-
-- `interval`: Monitoring interval in milliseconds
-- `maxQueries`: Maximum number of query results to keep in memory
-- `timeout`: Timeout for individual queries in milliseconds
-
-### API Reference
-
-#### StreamingQueryMonitor
-
-- `start()`: Start the monitoring process
-- `stop()`: Stop the monitoring process  
-- `getStats()`: Get current monitoring statistics
-- `isMonitorRunning()`: Check if monitor is currently running
-- `getQueryResult(id)`: Get a specific query result by ID
-- `getAllQueryResults()`: Get all query results
-
 ## Contributing
 
 1. Fork the repository
@@ -170,4 +95,8 @@ The `QueryConfig` interface supports the following options:
 
 ## License
 
-MIT
+This code is copyrighted by [Ghent University - imec](https://www.ugent.be/ea/idlab/en) and released under the [MIT Licence](./LICENCE) 
+
+## Contact
+
+For any questions, please contact [Kush](mailto:mailkushbisen@gmail.com) or create an issue in the repository. 
