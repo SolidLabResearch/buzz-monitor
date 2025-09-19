@@ -1,0 +1,42 @@
+{
+  "name": "buzz-monitor",
+  "version": "1.0.0",
+  "description": "Experimentation and Evaluation setup for the Streaming Query Hive.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts tests/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts tests/**/*.ts --fix",
+    "clean": "rm -rf dist coverage",
+    "dev": "npm run build:watch",
+    "prestart": "npm run build",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "typescript",
+    "streaming",
+    "query",
+    "monitoring",
+    "evaluation"
+  ],
+  "author": "SolidLabResearch",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.5.2",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
+    "jest": "^30.1.3",
+    "ts-jest": "^29.4.3",
+    "typescript": "^5.9.2"
+  }
+}
